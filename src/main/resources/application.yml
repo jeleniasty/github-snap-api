@@ -1,0 +1,5 @@
+github:
+  api:
+    base-url: https://api.github.com
+    users: /users
+    repos: /repos
