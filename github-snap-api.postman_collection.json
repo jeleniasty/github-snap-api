@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "5efb74c7-c686-4906-8c09-6aa8b35f4a45",
+		"name": "github-snap-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get user's repos",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/repos?username=astral-sh",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"repos"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "astral-sh"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user's repos 404 example",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/repos?username=astral-shsialalalalbububuub",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"repos"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "astral-shsialalalalbububuub"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user's repos 406 example",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/repos?username=astral-sh",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"repos"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "astral-sh"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user's repos (auth API call)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"accessToken\":\"\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/repos-auth?username=astral-sh",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"repos-auth"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "astral-sh"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user's repos (auth API call) 404 example",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"accessToken\":\"\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/repos-auth?username=astral-shsialalalalbububuub",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"repos-auth"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "astral-shsialalalalbububuub"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user's repos (auth API call) 406 example",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"accessToken\":\"\"}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/repos?username=astral-sh",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"repos"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "astral-sh"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
