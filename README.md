@@ -1,12 +1,9 @@
 # GitHub Snap API
-Simple API providing two endpoints to get user's github repos. 
+Simple API providing endpoint to get user's github repos. 
 
-1. /api/repos?username={github user login}
-2. /api/repos-auth?username={github user login}
+- /api/repos?username={github user login}
 
-To send authenticated requests (higher request per minute threshold) add accessToken to request body as follows:
-"accessToken":${YOUR-PERSONAL-ACCESS-TOKEN}. 
-More info about obtaining token in [Github reference document](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)    
+Api has 60 requests per hour limit. 
 
 Both endpoints accept requests with "Accept": "application/json" header.
 406 response status is returned when "Accept" header is not specified.
